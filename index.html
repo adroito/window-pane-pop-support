@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Window Pane Pop — Support</title>
+<meta name="description" content="Support for the Window Pane Pop app: help for storefront owners and window artists, account questions, and how to reach us.">
+<style>
+  :root { --ink:#14101f; --gold:#f2b33d; --pop:#ff5d3a; --teal:#1fb6a6; --cream:#fff7ea; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family: Georgia, 'Times New Roman', serif; background:var(--ink); color:var(--cream); }
+  header { padding:56px 24px 28px; text-align:center; background: radial-gradient(circle at 20% 10%, #3b2a63 0, transparent 55%), radial-gradient(circle at 85% 20%, #7a2d4d 0, transparent 50%), var(--ink); }
+  h1 { font-size:clamp(2.2rem, 6vw, 3.6rem); margin:0 0 8px; color:var(--gold); letter-spacing:.5px; }
+  header p { font-size:1.15rem; margin:0; color:var(--cream); }
+  main { max-width:760px; margin:0 auto; padding:32px 24px 64px; }
+  h2 { color:var(--teal); font-size:1.5rem; margin:36px 0 10px; }
+  h2:first-child { margin-top:0; }
+  p, li { font-size:1.05rem; line-height:1.55; }
+  a { color:var(--gold); }
+  .card { background:#1e1830; border:1px solid #372c55; border-radius:14px; padding:20px 22px; margin:16px 0; }
+  form label { display:block; margin:14px 0 6px; font-size:1rem; }
+  form input, form textarea { width:100%; padding:10px 12px; border-radius:8px; border:1px solid #372c55; background:#120d20; color:var(--cream); font-size:1rem; }
+  form button { margin-top:18px; background:var(--pop); color:#fff; border:0; border-radius:999px; padding:12px 28px; font-size:1.05rem; cursor:pointer; }
+  footer { text-align:center; padding:24px; color:#b9aed6; font-size:.95rem; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Window Pane Pop</h1>
+  <p>Support</p>
+</header>
+<main>
+  <h2>Storefront owners and managers</h2>
+  <div class="card">
+    <p>One request. We handle everything. We line up your local artist.</p>
+    <p>Post your window in the app and we take it from there — design, quote, and a local artist matched by your location. Your first match is free.</p>
+  </div>
+
+  <h2>Artists</h2>
+  <div class="card">
+    <p>Sign up in the app with your location and the work you do — window painting, murals, wall graphics, 3D chalk art. Jobs near you are matched by radius, and you set your own availability.</p>
+  </div>
+
+  <h2>Common questions</h2>
+  <p><strong>The app has my city wrong.</strong> Window Pane Pop fills in your city from your device location. Check that location permission is on for the app in your phone settings, then reopen the app.</p>
+  <p><strong>I cannot sign in.</strong> Try the sign-in option you used when you created your account (email, Apple, or Google). If it still fails, send us a message below with the email on your account.</p>
+  <p><strong>Delete my account.</strong> Send us a message below from the email on your account and say “delete my account.” We remove your account and its data and confirm by reply.</p>
+  <p><strong>Report a problem with a job.</strong> Send us a message below with the storefront name, the city, and what happened.</p>
+
+  <h2>Contact us</h2>
+  <!-- DRAFT: point this form at the Pane Pop Web3Forms access key before launch;
+       submissions should forward to the same hidden mailbox used by the other sites.
+       No personal name or personal email appears on this page, by design. -->
+  <form action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="REPLACE_WITH_PANE_POP_WEB3FORMS_KEY">
+    <input type="hidden" name="subject" value="Window Pane Pop support request">
+    <label for="name">Name</label>
+    <input id="name" name="name" type="text" required>
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" required>
+    <label for="message">How can we help?</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+</main>
+<footer>Window Pane Pop — painted windows, matched locally.</footer>
+</body>
+</html>
